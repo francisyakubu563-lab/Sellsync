@@ -4,7 +4,7 @@ A clean, responsive retail management dashboard built for the SellSync technical
 
 ## 🔗 Links
 - **Live Demo:** https://your-vercel-link.vercel.app
-- **GitHub:** https://github.com/your-username/sellsync-dashboard
+- **GitHub:** https://github.com/francisyakubu563-lab/sellsync-dashboard
 
 ## 📸 Features Implemented
 
