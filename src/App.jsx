@@ -1,5 +1,4 @@
-import { useState } from "react"
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from "recharts"
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts"
 
 const salesData = [
   { name: 'Mon', sales: 4000 },
@@ -11,38 +10,36 @@ const salesData = [
   { name: 'Sun', sales: 7490 },
 ]
 
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">SellSync</h1>
-          <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Live on Vercel</span>
+    <div style={{ minHeight: '100vh', background: '#f8fafc', padding: '24px', fontFamily: 'Inter, sans-serif' }}>
+      <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+        
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
+          <h1 style={{ fontSize: '28px', fontWeight: 'bold' }}>SellSync</h1>
+          <span style={{ background: '#dcfce7', color: '#15803d', padding: '6px 12px', borderRadius: '20px', fontSize: '13px' }}>● Live on Vercel</span>
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-white p-6 rounded-xl shadow-sm border">
-            <p className="text-gray-500 text-sm">Total Revenue</p>
-            <p className="text-2xl font-bold mt-2">$24,780</p>
-            <p className="text-green-600 text-sm mt-1">+12% from last week</p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px', marginBottom: '24px' }}>
+          <div style={{ background: 'white', padding: '20px', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
+            <p style={{ color: '#64748b', fontSize: '13px' }}>Total Revenue</p>
+            <p style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '8px' }}>$24,780</p>
+            <p style={{ color: '#16a34a', fontSize: '12px', marginTop: '4px' }}>↑ 12% from last week</p>
           </div>
-          <div className="bg-white p-6 rounded-xl shadow-sm border">
-            <p className="text-gray-500 text-sm">Orders</p>
-            <p className="text-2xl font-bold mt-2">1,234</p>
-            <p className="text-green-600 text-sm mt-1">+8% from last week</p>
+          <div style={{ background: 'white', padding: '20px', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
+            <p style={{ color: '#64748b', fontSize: '13px' }}>Orders</p>
+            <p style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '8px' }}>1,234</p>
+            <p style={{ color: '#16a34a', fontSize: '12px', marginTop: '4px' }}>↑ 8% from last week</p>
           </div>
-          <div className="bg-white p-6 rounded-xl shadow-sm border">
-            <p className="text-gray-500 text-sm">Customers</p>
-            <p className="text-2xl font-bold mt-2">892</p>
-            <p className="text-blue-600 text-sm mt-1">Active now</p>
+          <div style={{ background: 'white', padding: '20px', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
+            <p style={{ color: '#64748b', fontSize: '13px' }}>Customers</p>
+            <p style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '8px' }}>892</p>
+            <p style={{ color: '#2563eb', fontSize: '12px', marginTop: '4px' }}>Active now</p>
           </div>
         </div>
 
-        {/* Chart */}
-        <div className="bg-white p-6 rounded-xl shadow-sm border">
-          <h2 className="text-lg font-semibold mb-6">Weekly Sales</h2>
+        <div style={{ background: 'white', padding: '20px', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
+          <h2 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '20px' }}>Weekly Sales</h2>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={salesData}>
               <CartesianGrid strokeDasharray="3 3" />
@@ -53,9 +50,8 @@ function App() {
             </BarChart>
           </ResponsiveContainer>
         </div>
+
       </div>
     </div>
   )
 }
-
-export default App
